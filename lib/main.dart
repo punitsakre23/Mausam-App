@@ -24,7 +24,7 @@ class _WeatherState extends State<Weather> {
   void getWeatherInfo() async {
     city = inputcontroller.text;
     var response = await http.get(Uri.parse(
-        "http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=7d8a40945f43c274f683640f32d566ad"));
+        "http://api.openweathermap.org/data/2.5/weather?q=${city}&appid={API ID}"));
 
     Map details = jsonDecode(response.body);
 
